@@ -1,0 +1,12 @@
+# read design
+read -sv src/state_machine.v
+hierarchy -top state_machine
+
+# the high-level stuff
+proc; fsm; opt; memory; techmap; opt
+
+# generate verilog optimized code
+write_verilog sim/src/state_machine.v
+
+# cleanup
+clean

@@ -1,0 +1,12 @@
+# read design
+read -sv src/bcd_counter_3digits.v
+hierarchy -top bcd_counter_3digits
+
+# the high-level stuff
+proc; fsm; opt; memory; techmap; opt
+
+# generate verilog optimized code
+write_verilog sim/src/bcd_counter_3digits.v
+
+# cleanup
+clean
