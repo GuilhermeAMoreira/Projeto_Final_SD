@@ -1,0 +1,15 @@
+# read design
+read -sv src/bcd_counter_3digits.v
+hierarchy -top bcd_counter_3digits
+
+# the high-level stuff
+proc; opt
+
+# opens a window with the RTL diagram
+show -format ps -viewer gv
+
+# generate verilog optimized code
+#write_verilog sim/src/control_machine.v
+
+# cleanup
+clean
