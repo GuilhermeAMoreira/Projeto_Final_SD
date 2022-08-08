@@ -1,0 +1,12 @@
+# read design
+read -sv src/state_machine.v
+hierarchy -top state_machine
+
+# the high-level stuff
+proc; opt
+
+# opens a window with the RTL diagram
+show -format ps -viewer gv
+
+# cleanup
+clean
